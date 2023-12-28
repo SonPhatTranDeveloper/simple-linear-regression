@@ -13,8 +13,8 @@ from var import PATH
 wine = pd.read_csv(os.path.join(PATH, "dataraw", "winequality-red.csv"), sep=";")
 
 # Get the features and outputs
-X = wine.iloc[:, :-1]
-y = wine.iloc[:, -1]
+X = wine.iloc[:, :-1].values
+y = wine.iloc[:, -1].values
 
 # Scale the output
 y = (y - 5) / 10
